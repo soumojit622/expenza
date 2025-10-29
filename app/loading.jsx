@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export default function LoadingPage() {
@@ -32,11 +31,6 @@ export default function LoadingPage() {
         Fetching recent expenses, group data, balances and activity. Please hold
         on for a moment.
       </p>
-
-      {/* Progress shimmer */}
-      <div className="w-40 h-1.5 bg-border/40 overflow-hidden rounded-full">
-        <div className="h-full w-1/2 bg-primary animate-[shimmer_1.2s_infinite]"></div>
-      </div>
 
       {/* Status line */}
       <p className="text-xs text-primary/80 animate-pulse">Syncing securely…</p>

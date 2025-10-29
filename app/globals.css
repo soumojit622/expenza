@@ -79,7 +79,6 @@
   --color-destructive-foreground: var(--destructive-foreground);
 }
 
-
 :root {
   --radius: 0.5rem;
   --background: oklch(0.9818 0.0054 95.0986);
