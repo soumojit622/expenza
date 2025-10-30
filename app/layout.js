@@ -1,7 +1,10 @@
-import { DM_Sans } from "next/font/google";
-import "./globals.css";
-import { Toaster } from "sonner";
+import BacktoTop from "@/components/BacktoTop";
+import { ConvexClientProvider } from "@/components/convex-client-provider";
 import { HeroHeader } from "@/components/header";
+import { ClerkProvider } from "@clerk/nextjs";
+import { DM_Sans } from "next/font/google";
+import { Toaster } from "sonner";
+import "./globals.css";
 
 const font = DM_Sans({ subsets: ["latin"] });
 
@@ -28,13 +31,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/logos/logo-s.png" sizes="any" />
-      </head>
       <body className={`${font.className}`}>
-        <HeroHeader />
-        {children}
-        <Toaster richColors closeButton />
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+        >
+          <ConvexClientProvider>
+            <HeroHeader />
+            <BacktoTop/>
+            {children}
+            <Toaster richColors closeButton />
+          </ConvexClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   );

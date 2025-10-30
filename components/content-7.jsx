@@ -53,14 +53,14 @@ export default function ContentSections() {
           <div className="relative mt-6 sm:mt-0">
             <div className="bg-linear-to-b aspect-67/34 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
               <Image
-                src="/exercice-dark.png"
+                src="/image.jpg"
                 className="hidden rounded-[15px] dark:block"
                 alt="Expenza dashboard dark"
                 width={1206}
                 height={612}
               />
               <Image
-                src="/exercice.png"
+                src="/image.jpg"
                 className="rounded-[15px] shadow dark:hidden"
                 alt="Expenza dashboard light"
                 width={1206}

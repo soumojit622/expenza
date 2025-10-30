@@ -12,14 +12,14 @@ export default function ContentSection() {
           <div className="relative mb-6 sm:mb-0">
             <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
               <Image
-                src="/payments.png"
+                src="/image.jpg"
                 className="hidden rounded-[15px] dark:block"
                 alt="expense dashboard dark"
                 width={1207}
                 height={929}
               />
               <Image
-                src="/payments-light.png"
+                src="/image.jpg"
                 className="rounded-[15px] shadow dark:hidden"
                 alt="expense dashboard light"
                 width={1207}
